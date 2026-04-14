@@ -86,6 +86,8 @@ section{padding:100px 0;position:relative;z-index:3;}
 /* ═════ TYPOGRAPHY ═════ */
 .section-label{font-family:var(--mono);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--y400);margin-bottom:14px;display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border:1px solid var(--border-accent);border-radius:6px;background:rgba(243,230,0,.04);}
 .section-label::before{content:'';width:6px;height:6px;background:var(--y400);border-radius:50%;box-shadow:0 0 8px var(--y400);animation:blink 1.5s ease-in-out infinite;}
+.section-label-alert{color:#ff3b30;border-color:rgba(255,59,48,.4);background:rgba(255,59,48,.08);font-weight:700;font-size:.78rem;}
+.section-label-alert::before{background:#ff3b30;box-shadow:0 0 10px #ff3b30;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
 
 .section-title{font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.15;margin-bottom:20px;color:var(--n100);letter-spacing:-.5px;}
@@ -270,7 +272,8 @@ nav .container{display:flex;align-items:center;justify-content:space-between;}
 .pain-list{list-style:none;display:flex;flex-direction:column;gap:12px;font-family:var(--mono);}
 .pain-item{display:flex;align-items:flex-start;gap:14px;padding:16px 20px;background:rgba(248,124,86,.04);border:1px solid rgba(248,124,86,.12);border-left:3px solid var(--c400);border-radius:6px;font-size:.86rem;color:var(--text-secondary);transition:all .3s;}
 .pain-item:hover{background:rgba(248,124,86,.08);transform:translateX(4px);}
-.pain-item::before{content:'ERROR:';color:var(--c400);font-weight:700;font-size:.72rem;letter-spacing:1px;flex-shrink:0;margin-top:2px;}
+.pain-item .x-icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(255,59,48,.14);border:1px solid rgba(255,59,48,.4);display:inline-flex;align-items:center;justify-content:center;color:#ff3b30;margin-top:1px;}
+.pain-item .x-icon svg{width:12px;height:12px;}
 
 /* ═════ SOLUTION (steps) ═════ */
 .solution{position:relative;}
@@ -555,16 +558,16 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
   <div class="container">
     <div class="problem-grid">
       <div>
-        <div class="section-label">// 01_problem.md</div>
-        <h2 class="section-title">Por que a maioria dos concurseiros <span>trava no loop infinito?</span></h2>
-        <p class="section-subtitle">A maioria estuda no modo <code class="inl">legacy</code>: sem estratégia, sem métrica, e sem um sistema que processe os dados do edital de forma inteligente.</p>
+        <div class="section-label section-label-alert">ATENÇÃO!</div>
+        <h2 class="section-title">Se o método tradicional fosse realmente o melhor, <span>por que só a minoria passa?</span></h2>
+        <p class="section-subtitle">Tem gente que nunca muda a forma de estudar e mesmo assim espera resultados diferentes...</p>
       </div>
       <ul class="pain-list">
-        <li class="pain-item">Estuda horas sem saber o que realmente cai na prova</li>
-        <li class="pain-item">Não consegue manter uma rotina consistente de estudos</li>
-        <li class="pain-item">Fica perdido entre dezenas de materiais e apostilas</li>
-        <li class="pain-item">Trabalha o dia inteiro e acha que não tem tempo</li>
-        <li class="pain-item">Já tentou várias vezes e nunca foi aprovado</li>
+        <li class="pain-item"><span class="x-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Estuda horas sem saber o que realmente cai na prova</li>
+        <li class="pain-item"><span class="x-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Não consegue manter uma rotina consistente de estudos</li>
+        <li class="pain-item"><span class="x-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Fica perdido entre dezenas de materiais e apostilas</li>
+        <li class="pain-item"><span class="x-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Trabalha o dia inteiro e acha que não tem tempo</li>
+        <li class="pain-item"><span class="x-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Já tentou várias vezes e nunca foi aprovado</li>
       </ul>
     </div>
   </div>
