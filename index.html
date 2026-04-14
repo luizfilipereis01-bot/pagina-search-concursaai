@@ -380,6 +380,11 @@ nav .container{display:flex;align-items:center;justify-content:space-between;}
 .pricing-card-elite{border:2px solid var(--y400);box-shadow:0 0 50px rgba(243,230,0,.18),0 20px 60px rgba(0,0,0,.5);transform:scale(1.02);}
 .pricing-card-elite::before{height:4px;}
 .pricing-popular{position:absolute;top:16px;right:-42px;transform:rotate(35deg);background:linear-gradient(135deg,var(--y400),var(--c400));color:var(--n900);font-weight:800;font-size:.68rem;letter-spacing:2px;padding:6px 50px;font-family:var(--mono);text-transform:uppercase;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:2;}
+.pricing-mockup{margin:-44px -36px 24px;padding:24px 20px 0;background:linear-gradient(180deg,rgba(243,230,0,.04),transparent);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;}
+.pricing-mockup::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center top,rgba(243,230,0,.1),transparent 70%);pointer-events:none;}
+.pricing-mockup img{max-width:100%;height:auto;display:block;filter:drop-shadow(0 12px 28px rgba(0,0,0,.4));transition:transform .5s;position:relative;z-index:1;max-height:220px;object-fit:contain;}
+.pricing-card:hover .pricing-mockup img{transform:scale(1.04);}
+.pricing-card-elite .pricing-mockup{background:linear-gradient(180deg,rgba(243,230,0,.08),transparent);}
 .pricing-features-bonus{list-style:none;display:flex;flex-direction:column;gap:10px;padding:16px 0 0;margin-top:16px;border-top:1px dashed var(--border-accent);font-family:var(--mono);font-size:.82rem;}
 .pricing-features-bonus li{display:flex;align-items:flex-start;gap:12px;color:var(--y400);text-align:left;}
 .pricing-features-bonus li svg{flex-shrink:0;width:18px;height:18px;color:var(--c400);margin-top:2px;}
@@ -957,6 +962,7 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
 
       <!-- PLANO TRIMESTRAL -->
       <div class="pricing-card">
+        <div class="pricing-mockup"><img src="images/oferta-trimestral.png" alt="Oferta Plano Trimestral" loading="lazy"></div>
         <div class="pricing-badge">PLANO TRIMESTRAL</div>
         <div class="pricing-old">de R$ 1.302,00</div>
         <div class="pricing-label">por apenas 3x de</div>
@@ -985,6 +991,7 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
       <!-- PLANO ELITE -->
       <div class="pricing-card pricing-card-elite">
         <div class="pricing-popular">Mais Escolhido</div>
+        <div class="pricing-mockup"><img src="images/oferta-elite.png" alt="Oferta Plano Elite" loading="lazy"></div>
         <div class="pricing-badge">PLANO ELITE — 1 ANO</div>
         <div class="pricing-old">de R$ 997,00</div>
         <div class="pricing-label">por apenas 12x de</div>
