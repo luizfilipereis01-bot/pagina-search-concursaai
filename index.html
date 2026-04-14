@@ -210,6 +210,42 @@ nav .container{display:flex;align-items:center;justify-content:space-between;}
 .t-com{color:var(--text-muted);font-style:italic;}
 .t-cursor{display:inline-block;width:8px;height:14px;background:var(--y400);vertical-align:middle;animation:blink 1s step-end infinite;margin-left:2px;}
 
+/* ═════ HERO SEARCH (Google-like) ═════ */
+.hero-search{width:100%;max-width:540px;background:linear-gradient(135deg,var(--bg-card),#1a1712);border:1px solid var(--border-accent);border-radius:18px;padding:40px 30px 28px;position:relative;box-shadow:var(--glow-y),var(--glow-c),0 20px 60px rgba(0,0,0,.5);}
+.hero-search::before{content:'';position:absolute;inset:0;border-radius:18px;padding:1px;background:linear-gradient(135deg,var(--y400),transparent 40%,transparent 60%,var(--c400));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.3;pointer-events:none;}
+
+.search-logo{font-family:var(--font);font-size:3.4rem;font-weight:800;letter-spacing:-2px;text-align:center;margin-bottom:28px;line-height:1;}
+.search-logo .logo-ai{background:linear-gradient(135deg,var(--y400),var(--c400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:900;}
+
+.search-box{display:flex;align-items:center;gap:12px;background:rgba(0,0,0,.35);border:1px solid var(--border-accent);border-radius:999px;padding:12px 18px;transition:all .3s;position:relative;overflow:hidden;}
+.search-box:hover{border-color:var(--y400);box-shadow:0 0 0 3px rgba(243,230,0,.08);}
+.search-box::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(243,230,0,.06),transparent);transform:translateX(-100%);animation:searchShine 4s ease-in-out infinite;pointer-events:none;}
+@keyframes searchShine{0%,100%{transform:translateX(-100%);}50%{transform:translateX(100%);}}
+
+.search-icon{width:20px;height:20px;color:var(--y400);flex-shrink:0;}
+.search-input-wrap{flex:1;font-family:var(--font);font-size:.95rem;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:22px;display:flex;align-items:center;}
+#typed-query{color:var(--text-primary);}
+.type-cursor{display:inline-block;width:2px;height:18px;background:var(--y400);margin-left:2px;animation:blink 1s step-end infinite;vertical-align:middle;box-shadow:0 0 8px var(--y400);}
+
+.search-actions{display:flex;align-items:center;gap:10px;flex-shrink:0;padding-left:8px;border-left:1px solid var(--border);}
+.sa-icon{width:18px;height:18px;color:var(--text-muted);cursor:pointer;transition:color .2s;}
+.sa-icon:hover{color:var(--y400);}
+.ai-mode-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;background:linear-gradient(135deg,rgba(243,230,0,.12),rgba(248,124,86,.12));border:1px solid var(--border-accent);border-radius:999px;font-family:var(--font);font-size:.72rem;font-weight:600;color:var(--y400);cursor:pointer;white-space:nowrap;}
+.ai-mode-btn svg{width:12px;height:12px;}
+
+.trending-chips{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin-top:22px;}
+.tc-label{font-family:var(--mono);font-size:.68rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1.5px;margin-right:4px;}
+.tc-chip{padding:5px 12px;background:rgba(243,230,0,.05);border:1px solid var(--border);border-radius:999px;font-family:var(--mono);font-size:.72rem;color:var(--y400);transition:all .3s;cursor:default;}
+.tc-chip:hover{background:rgba(243,230,0,.1);border-color:var(--border-accent);}
+
+@media(max-width:480px){
+  .search-logo{font-size:2.4rem;}
+  .hero-search{padding:30px 20px 22px;}
+  .search-input-wrap{font-size:.82rem;}
+  .ai-mode-btn span,.ai-mode-btn{font-size:.65rem;}
+  .sa-icon{display:none;}
+}
+
 /* Floating chip near terminal */
 .chip-badge{position:absolute;padding:10px 14px;background:var(--bg-card);border:1px solid var(--border-accent);border-radius:8px;font-family:var(--mono);font-size:.72rem;color:var(--y400);box-shadow:0 8px 24px rgba(0,0,0,.4);display:flex;align-items:center;gap:8px;animation:float 6s ease-in-out infinite;}
 .chip-badge svg{width:16px;height:16px;}
@@ -458,27 +494,32 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
       </div>
       <div class="chip-badge chip-2">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        REAL-TIME
+        BUSCA.IA
       </div>
-      <div class="hero-terminal">
-        <div class="terminal-header">
-          <div class="terminal-dot"></div>
-          <div class="terminal-dot"></div>
-          <div class="terminal-dot"></div>
-          <span class="terminal-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
-            ~/concursa-ai — bash
-          </span>
+      <div class="hero-search">
+        <div class="search-logo">
+          <span style="color:var(--y400)">C</span><span style="color:var(--c400)">o</span><span style="color:var(--y400)">n</span><span style="color:var(--y500)">c</span><span style="color:var(--c400)">u</span><span style="color:var(--y400)">r</span><span style="color:var(--c500)">s</span><span style="color:var(--y400)">a</span>&nbsp;<span class="logo-ai">AI</span>
         </div>
-        <div class="terminal-body">
-          <div class="terminal-line"><span class="t-prompt">user@ai</span><span class="t-dim">:~$</span> <span class="t-cmd">concursa init</span> <span class="t-str">"Analista TRF-3"</span></div>
-          <div class="terminal-line"><span class="t-com">// loading neural network...</span></div>
-          <div class="terminal-line"><span class="t-output">✓</span> <span class="t-key">banca</span>: <span class="t-str">"FCC"</span> <span class="t-dim">[identified]</span></div>
-          <div class="terminal-line"><span class="t-output">✓</span> <span class="t-key">questões</span>: <span class="t-num">847</span> <span class="t-dim">parsed in 1.2s</span></div>
-          <div class="terminal-line"><span class="t-output">✓</span> <span class="t-key">patterns</span>: <span class="t-num">142</span> <span class="t-dim">mapped</span></div>
-          <div class="terminal-line"><span class="t-warn">⚡</span> <span class="t-key">top_subjects</span>: <span class="t-str">[Dir.Const, Admin, Port, RLM, Info]</span></div>
-          <div class="terminal-line"><span class="t-prompt">user@ai</span><span class="t-dim">:~$</span> <span class="t-cmd">concursa generate</span> <span class="t-str">"plan"</span> <span class="t-key">--days</span>=<span class="t-num">90</span></div>
-          <div class="terminal-line"><span class="t-output">✓ plan.json generated</span><span class="t-cursor"></span></div>
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <div class="search-input-wrap">
+            <span id="typed-query"></span><span class="type-cursor"></span>
+          </div>
+          <div class="search-actions">
+            <svg class="sa-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            <svg class="sa-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <div class="ai-mode-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14 18.2 21 12 17.8 5.8 21 7 14 2 9.3 9 8.5 12 2"/></svg>
+              Modo IA
+            </div>
+          </div>
+        </div>
+        <div class="trending-chips">
+          <span class="tc-label">Em alta:</span>
+          <span class="tc-chip">PRF 2026</span>
+          <span class="tc-chip">INSS</span>
+          <span class="tc-chip">Petrobrás</span>
+          <span class="tc-chip">Cebraspe</span>
         </div>
       </div>
     </div>
@@ -843,6 +884,38 @@ function toggleFaq(btn){const item=btn.parentElement;const wasActive=item.classL
 /* ═════ REVEAL ON SCROLL ═════ */
 const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.1});
 document.querySelectorAll('.step-card,.feature-card,.benefit-card,.testimonial-card,.pain-item').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s ease,transform .6s ease';observer.observe(el);});
+
+/* ═════ SEARCH TYPING ANIMATION ═════ */
+(function(){
+  const el=document.getElementById('typed-query');
+  if(!el)return;
+  const queries=[
+    "Quando sai o próximo concurso da PRF?",
+    "Concurso da Petrobrás 2026",
+    "Hackear Banca Cebraspe",
+    "Hackear Banca FGV",
+    "Hackear Banca FCC",
+    "Como passar no concurso do INSS",
+    "Gere 40 resumos completos sobre Direito Penal",
+    "O que mais cai na prova do INSS"
+  ];
+  let qi=0,ci=0,deleting=false;
+  function tick(){
+    const q=queries[qi];
+    if(!deleting){
+      ci++;
+      el.textContent=q.slice(0,ci);
+      if(ci>=q.length){deleting=true;setTimeout(tick,1800);return;}
+      setTimeout(tick,45+Math.random()*55);
+    }else{
+      ci--;
+      el.textContent=q.slice(0,ci);
+      if(ci<=0){deleting=false;qi=(qi+1)%queries.length;setTimeout(tick,400);return;}
+      setTimeout(tick,22);
+    }
+  }
+  setTimeout(tick,600);
+})();
 
 /* ═════ MATRIX RAIN ═════ */
 (function(){
