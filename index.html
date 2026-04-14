@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concursa AI – Inteligência Artificial para Concurso Público | Seja Aprovado com IA</title>
+<meta name="description" content="A primeira Inteligência Artificial feita para concurso público. Gere resumos, simulados, flashcards e planeje seus estudos com IA. Seja aprovado no próximo concurso.">
+<meta name="keywords" content="inteligência artificial concurso público, IA para concurso, estudar para concurso com IA, planejador de estudos, simulados com IA, flashcards concurso">
+<link rel="canonical" href="https://lp.egconcursaai.com/">
+
+<meta property="og:title" content="Concursa AI – Inteligência Artificial para Concurso Público">
+<meta property="og:description" content="A primeira IA feita para concurseiros. Resumos, simulados, flashcards e planejamento inteligente.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lp.egconcursaai.com/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O que é o Concursa AI?","acceptedAnswer":{"@type":"Answer","text":"O Concursa AI é a primeira inteligência artificial desenvolvida exclusivamente para concurso público. Ele gera resumos, flashcards, simulados personalizados, planeja seus estudos e identifica padrões de questões da sua banca."}},
+    {"@type":"Question","name":"O Concursa AI funciona para qualquer concurso?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Concursa AI identifica os padrões de qualquer banca do Brasil e gera conteúdo personalizado para o concurso que você está se preparando."}},
+    {"@type":"Question","name":"Preciso ter experiência com tecnologia para usar?","acceptedAnswer":{"@type":"Answer","text":"Não. O Concursa AI foi pensado para ser simples e intuitivo. Basta fazer login e começar a usar as ferramentas."}},
+    {"@type":"Question","name":"Quanto tempo leva para ver resultados?","acceptedAnswer":{"@type":"Answer","text":"Desde o primeiro dia você já consegue gerar resumos, flashcards e simulados. A maioria dos usuários reporta melhora significativa em menos de 2 semanas."}},
+    {"@type":"Question","name":"Qual o valor do Concursa AI?","acceptedAnswer":{"@type":"Answer","text":"O Concursa AI está disponível por apenas 3x de R$73,51, com acesso a todas as ferramentas incluídas."}},
+    {"@type":"Question","name":"Como recebo o acesso após a compra?","acceptedAnswer":{"@type":"Answer","text":"Imediatamente após a confirmação do pagamento, você recebe o acesso no seu e-mail."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Concursa AI","applicationCategory":"EducationalApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"197.00","priceCurrency":"BRL"}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/*
+  FONT: Helvena (host WOFF2 files on your server and uncomment below)
+  @font-face { font-family:'Helvena'; src:url('/fonts/Helvena-Regular.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Helvena'; src:url('/fonts/Helvena-Medium.woff2') format('woff2'); font-weight:500; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Helvena'; src:url('/fonts/Helvena-Semibold.woff2') format('woff2'); font-weight:600; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Helvena'; src:url('/fonts/Helvena-Bold.woff2') format('woff2'); font-weight:700; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Helvena'; src:url('/fonts/Helvena-Extrabold.woff2') format('woff2'); font-weight:800; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Helvena'; src:url('/fonts/Helvena-Black.woff2') format('woff2'); font-weight:900; font-style:normal; font-display:swap; }
+*/
+
+:root {
+  /* ══════ BRAND PALETTE — NO BLUE ══════ */
+  /* Neutrals (neutras e aconchegantes) */
+  --n100: #E8E6DF;
+  --n200: #D7D2CB;
+  --n600: #6E6259;
+  --n900: #3D3935;
+
+  /* Yellows (principais e inovadoras) */
+  --y100: #F1EB9C;
+  --y400: #F3E600;
+  --y500: #E1CD00;
+  --y600: #CFB500;
+
+  /* Corals (calorosas e de apoio) */
+  --c100: #FAAA8D;
+  --c400: #F87C56;
+  --c500: #F4633A;
+  --c700: #BE531C;
+
+  /* Derived surfaces */
+  --bg-dark: #1c1916;
+  --bg-dark-2: #242019;
+  --bg-card: #2c2720;
+  --bg-card-hover: #342e26;
+  --text-primary: var(--n100);
+  --text-secondary: #b8afa6;
+  --text-muted: #8a7f76;
+  --border: rgba(243, 230, 0, 0.07);
+  --border-accent: rgba(243, 230, 0, 0.16);
+  --glow-y: 0 0 40px rgba(243, 230, 0, 0.07);
+  --glow-c: 0 0 40px rgba(248, 124, 86, 0.05);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --font: 'Helvena', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:var(--font);background:var(--bg-dark);color:var(--text-primary);overflow-x:hidden;line-height:1.7;}
+
+/* Grid BG */
+.grid-bg{position:fixed;inset:0;background-image:linear-gradient(rgba(243,230,0,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(243,230,0,0.015) 1px,transparent 1px);background-size:70px 70px;pointer-events:none;z-index:0;}
+
+.container{max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:1;}
+section{padding:100px 0;position:relative;}
+
+.section-label{font-family:var(--mono);font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--y400);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.section-label::before{content:'';width:20px;height:1px;background:var(--y400);}
+
+.section-title{font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.15;margin-bottom:20px;color:var(--n100);}
+.section-title span{background:linear-gradient(135deg,var(--y400),var(--c400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+.section-subtitle{font-size:1.1rem;color:var(--text-secondary);max-width:600px;line-height:1.8;}
+
+/* BUTTONS */
+.btn-primary{display:inline-flex;align-items:center;gap:10px;padding:18px 40px;background:linear-gradient(135deg,var(--y400),var(--y500));color:var(--n900);font-family:var(--font);font-weight:700;font-size:1rem;border:none;border-radius:60px;cursor:pointer;text-decoration:none;transition:all .3s;letter-spacing:.3px;position:relative;overflow:hidden;}
+.btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transition:left .5s;}
+.btn-primary:hover::before{left:100%;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(243,230,0,.25);}
+
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:transparent;color:var(--c400);font-family:var(--font);font-weight:600;font-size:.95rem;border:1px solid rgba(248,124,86,.3);border-radius:60px;cursor:pointer;text-decoration:none;transition:all .3s;}
+.btn-secondary:hover{background:rgba(248,124,86,.06);border-color:var(--c400);}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:16px 0;background:rgba(28,25,22,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+nav .container{display:flex;align-items:center;justify-content:space-between;}
+
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--y400),var(--c400));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;color:var(--n900);}
+.nav-logo-text{font-weight:700;font-size:1.15rem;color:var(--text-primary);}
+.nav-logo-text em{font-style:normal;color:var(--y400);}
+
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+.nav-links a{color:var(--text-secondary);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .3s;}
+.nav-links a:hover{color:var(--y400);}
+.nav-cta{padding:10px 24px!important;font-size:.85rem!important;}
+.nav-mobile-toggle{display:none;background:none;border:none;color:var(--text-primary);font-size:1.5rem;cursor:pointer;}
+
+/* Mobile nav open state */
+@media(max-width:1024px){
+  .nav-links.show{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(28,25,22,.97);padding:20px 24px;gap:16px;border-bottom:1px solid var(--border);}
+}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:100px;position:relative;overflow:hidden;}
+
+.hero-orb{position:absolute;border-radius:50%;filter:blur(120px);opacity:.3;animation:orbFloat 10s ease-in-out infinite;}
+.hero-orb-1{width:550px;height:550px;background:radial-gradient(circle,rgba(243,230,0,.12),transparent);top:-120px;right:-80px;}
+.hero-orb-2{width:450px;height:450px;background:radial-gradient(circle,rgba(248,124,86,.1),transparent);bottom:-80px;left:-120px;animation-delay:-5s;}
+@keyframes orbFloat{0%,100%{transform:translate(0,0);}50%{transform:translate(25px,-18px);}}
+
+.hero .container{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(243,230,0,.05);border:1px solid var(--border-accent);border-radius:60px;font-family:var(--mono);font-size:.73rem;color:var(--y400);margin-bottom:24px;letter-spacing:1px;}
+.hero-badge .pulse{width:8px;height:8px;background:var(--c500);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(244,99,58,.4);}50%{opacity:.8;box-shadow:0 0 0 8px rgba(244,99,58,0);}}
+
+.hero h1{font-size:clamp(2.5rem,5.5vw,3.8rem);font-weight:800;line-height:1.1;margin-bottom:24px;letter-spacing:-.5px;color:var(--n100);}
+.hero h1 .gradient{background:linear-gradient(135deg,var(--y400),var(--c400),var(--y400));background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 5s linear infinite;}
+@keyframes shimmer{0%{background-position:0% center;}100%{background-position:200% center;}}
+
+.hero-description{font-size:1.12rem;color:var(--text-secondary);margin-bottom:36px;line-height:1.8;max-width:520px;}
+.hero-actions{display:flex;gap:16px;margin-bottom:48px;flex-wrap:wrap;}
+
+.hero-stats{display:flex;gap:40px;}
+.hero-stat{border-left:2px solid var(--border-accent);padding-left:16px;}
+.hero-stat-value{font-size:1.5rem;font-weight:800;color:var(--y400);font-family:var(--mono);}
+.hero-stat-label{font-size:.78rem;color:var(--text-muted);margin-top:2px;}
+
+/* Terminal */
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;}
+.hero-terminal{width:100%;max-width:500px;background:var(--bg-card);border:1px solid var(--border-accent);border-radius:var(--radius);overflow:hidden;box-shadow:var(--glow-y),var(--glow-c);}
+.terminal-header{display:flex;align-items:center;gap:8px;padding:14px 18px;background:rgba(243,230,0,.03);border-bottom:1px solid var(--border);}
+.terminal-dot{width:10px;height:10px;border-radius:50%;}
+.terminal-dot:nth-child(1){background:var(--c500);}
+.terminal-dot:nth-child(2){background:var(--y400);}
+.terminal-dot:nth-child(3){background:var(--n200);}
+.terminal-title{font-family:var(--mono);font-size:.73rem;color:var(--text-muted);margin-left:8px;}
+.terminal-body{padding:24px;font-family:var(--mono);font-size:.8rem;line-height:2;}
+.terminal-line{opacity:0;animation:typeLine .4s forwards;}
+.terminal-line:nth-child(1){animation-delay:.3s;}
+.terminal-line:nth-child(2){animation-delay:.8s;}
+.terminal-line:nth-child(3){animation-delay:1.3s;}
+.terminal-line:nth-child(4){animation-delay:1.8s;}
+.terminal-line:nth-child(5){animation-delay:2.3s;}
+.terminal-line:nth-child(6){animation-delay:2.8s;}
+.terminal-line:nth-child(7){animation-delay:3.3s;}
+@keyframes typeLine{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+
+.t-prompt{color:var(--y400);}
+.t-cmd{color:var(--n100);}
+.t-output{color:var(--y500);}
+.t-warn{color:var(--c400);}
+.t-dim{color:var(--text-muted);}
+
+/* SOCIAL PROOF */
+.social-proof{padding:44px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(243,230,0,.01);}
+.proof-grid{display:flex;align-items:center;justify-content:center;gap:50px;flex-wrap:wrap;}
+.proof-item{display:flex;align-items:center;gap:12px;color:var(--text-secondary);font-size:.88rem;}
+.proof-icon{width:46px;height:46px;background:rgba(243,230,0,.05);border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
+.proof-number{font-weight:800;font-size:1.15rem;color:var(--n100);font-family:var(--mono);}
+
+/* PROBLEM */
+.problem{background:linear-gradient(180deg,var(--bg-dark),var(--bg-dark-2));}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.pain-list{list-style:none;display:flex;flex-direction:column;gap:16px;}
+.pain-item{display:flex;align-items:flex-start;gap:14px;padding:18px 22px;background:rgba(248,124,86,.04);border:1px solid rgba(248,124,86,.1);border-radius:var(--radius-sm);font-size:.93rem;color:var(--text-secondary);transition:all .3s;}
+.pain-item:hover{background:rgba(248,124,86,.08);border-color:rgba(248,124,86,.2);transform:translateX(4px);}
+.pain-icon{flex-shrink:0;width:28px;height:28px;background:rgba(248,124,86,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--c500);font-weight:700;}
+
+/* SOLUTION */
+.solution{position:relative;}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:60px;}
+.step-card{position:relative;padding:40px 30px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all .4s;overflow:hidden;}
+.step-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--y400),var(--c400));opacity:0;transition:opacity .4s;}
+.step-card:hover{border-color:var(--border-accent);transform:translateY(-4px);}
+.step-card:hover::before{opacity:1;}
+.step-number{font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:2px;color:var(--y400);margin-bottom:20px;text-transform:uppercase;}
+.step-icon{width:56px;height:56px;background:linear-gradient(135deg,rgba(243,230,0,.08),rgba(248,124,86,.08));border:1px solid var(--border-accent);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;}
+.step-title{font-size:1.18rem;font-weight:700;margin-bottom:12px;}
+.step-desc{font-size:.88rem;color:var(--text-secondary);line-height:1.7;}
+
+/* FEATURES */
+.features{background:var(--bg-dark-2);}
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:60px;}
+.feature-card{padding:36px 32px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all .4s;position:relative;}
+.feature-card:hover{border-color:var(--border-accent);box-shadow:var(--glow-y);}
+.feature-header{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
+.feature-icon{width:48px;height:48px;background:linear-gradient(135deg,rgba(243,230,0,.06),rgba(248,124,86,.06));border:1px solid var(--border-accent);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
+.feature-name{font-size:1.08rem;font-weight:700;}
+.feature-desc{font-size:.88rem;color:var(--text-secondary);line-height:1.7;}
+.feature-tag{display:inline-block;margin-top:14px;padding:4px 12px;font-family:var(--mono);font-size:.68rem;color:var(--y400);background:rgba(243,230,0,.05);border:1px solid rgba(243,230,0,.12);border-radius:6px;letter-spacing:1px;text-transform:uppercase;}
+
+/* BENEFITS */
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;}
+.benefit-card{text-align:center;padding:40px 28px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all .3s;}
+.benefit-card:hover{border-color:var(--border-accent);transform:translateY(-4px);}
+.benefit-emoji{font-size:2.5rem;margin-bottom:18px;}
+.benefit-title{font-size:1.02rem;font-weight:700;margin-bottom:10px;}
+.benefit-desc{font-size:.84rem;color:var(--text-secondary);line-height:1.7;}
+
+/* TESTIMONIALS */
+.testimonials{background:var(--bg-dark-2);}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;}
+.testimonial-card{padding:32px 28px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);}
+.testimonial-stars{color:var(--y400);font-size:.9rem;margin-bottom:16px;letter-spacing:2px;}
+.testimonial-text{font-size:.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:20px;font-style:italic;}
+.testimonial-author{display:flex;align-items:center;gap:12px;}
+.testimonial-avatar{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--y400),var(--c400));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:var(--n900);}
+.testimonial-name{font-weight:600;font-size:.88rem;}
+.testimonial-role{font-size:.73rem;color:var(--text-muted);}
+
+/* PRICING */
+.pricing{position:relative;}
+.pricing-card{max-width:560px;margin:60px auto 0;padding:48px 44px;background:var(--bg-card);border:2px solid var(--border-accent);border-radius:24px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--glow-y);}
+.pricing-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--y400),var(--c400),var(--y400));background-size:200% auto;animation:shimmer 3s linear infinite;}
+.pricing-badge{display:inline-block;padding:6px 16px;background:rgba(244,99,58,.08);border:1px solid rgba(244,99,58,.2);border-radius:60px;font-family:var(--mono);font-size:.68rem;color:var(--c400);letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;}
+.pricing-old{font-size:1.05rem;color:var(--text-muted);text-decoration:line-through;margin-bottom:8px;}
+.pricing-label{font-size:.95rem;color:var(--text-secondary);margin-bottom:4px;}
+.pricing-value{font-size:3.4rem;font-weight:900;background:linear-gradient(135deg,var(--y400),var(--c400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px;font-family:var(--mono);}
+.pricing-period{font-size:.83rem;color:var(--text-muted);margin-bottom:32px;}
+.pricing-features{list-style:none;text-align:left;margin-bottom:36px;display:flex;flex-direction:column;gap:14px;}
+.pricing-features li{display:flex;align-items:center;gap:12px;font-size:.88rem;color:var(--text-secondary);}
+.pricing-features li::before{content:'✓';flex-shrink:0;width:24px;height:24px;background:rgba(243,230,0,.08);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.73rem;color:var(--y400);font-weight:700;}
+.pricing-cta{width:100%;justify-content:center;font-size:1.02rem;padding:20px 40px;}
+.pricing-guarantee{margin-top:20px;font-size:.78rem;color:var(--text-muted);display:flex;align-items:center;justify-content:center;gap:6px;}
+
+/* FAQ */
+.faq{background:var(--bg-dark-2);}
+.faq-grid{max-width:800px;margin:60px auto 0;display:flex;flex-direction:column;gap:12px;}
+.faq-item{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;transition:border-color .3s;}
+.faq-item.active{border-color:var(--border-accent);}
+.faq-question{width:100%;display:flex;align-items:center;justify-content:space-between;padding:22px 26px;background:none;border:none;color:var(--text-primary);font-family:var(--font);font-size:.98rem;font-weight:600;cursor:pointer;text-align:left;transition:color .3s;}
+.faq-question:hover{color:var(--y400);}
+.faq-chevron{font-size:.82rem;color:var(--text-muted);transition:transform .3s;flex-shrink:0;}
+.faq-item.active .faq-chevron{transform:rotate(180deg);color:var(--y400);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq-item.active .faq-answer{max-height:300px;}
+.faq-answer-inner{padding:0 26px 22px;font-size:.88rem;color:var(--text-secondary);line-height:1.8;}
+
+/* FINAL CTA */
+.final-cta{text-align:center;padding:120px 0;position:relative;}
+.final-cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(243,230,0,.05),transparent 60%);border-radius:50%;pointer-events:none;}
+.final-cta h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:18px;}
+.final-cta p{font-size:1.08rem;color:var(--text-secondary);margin-bottom:40px;max-width:550px;margin-left:auto;margin-right:auto;}
+
+/* FOOTER */
+footer{padding:60px 0 30px;border-top:1px solid var(--border);}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px;flex-wrap:wrap;gap:40px;}
+.footer-brand p{font-size:.84rem;color:var(--text-muted);max-width:300px;margin-top:12px;line-height:1.7;}
+.footer-links h4{font-size:.78rem;text-transform:uppercase;letter-spacing:2px;color:var(--text-muted);margin-bottom:16px;font-family:var(--mono);}
+.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{color:var(--text-secondary);text-decoration:none;font-size:.88rem;transition:color .3s;}
+.footer-links a:hover{color:var(--y400);}
+.footer-bottom{padding-top:24px;border-top:1px solid var(--border);text-align:center;font-size:.78rem;color:var(--text-muted);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero .container{grid-template-columns:1fr;text-align:center;}
+  .hero-description{margin:0 auto 36px;}
+  .hero-actions{justify-content:center;}
+  .hero-stats{justify-content:center;}
+  .hero-visual{margin-top:40px;}
+  .problem-grid{grid-template-columns:1fr;}
+  .steps-grid{grid-template-columns:1fr;max-width:460px;margin:60px auto 0;}
+  .features-grid{grid-template-columns:1fr;}
+  .benefits-grid{grid-template-columns:1fr 1fr;}
+  .testimonials-grid{grid-template-columns:1fr;max-width:500px;margin:60px auto 0;}
+}
+@media(max-width:768px){
+  section{padding:70px 0;}
+  .nav-links{display:none;}
+  .nav-mobile-toggle{display:block;}
+  .hero{min-height:auto;padding:120px 0 70px;}
+  .hero-stats{flex-direction:column;gap:20px;align-items:center;}
+  .hero-stat{border-left:none;border-bottom:1px solid var(--border-accent);padding:0 0 14px;text-align:center;}
+  .benefits-grid{grid-template-columns:1fr;}
+  .pricing-card{padding:36px 24px;}
+  .pricing-value{font-size:2.6rem;}
+  .footer-top{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">C</div>
+      <div class="nav-logo-text">Concursa<em>AI</em></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#funcionalidades">Funcionalidades</a></li>
+      <li><a href="#como-funciona">Como Funciona</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#preco">Preço</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="https://pay.hub.la/YY70fYb2WcWVNJwNKXFV/?utm_source=search" class="btn-primary nav-cta">Começar Agora</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="pulse"></span>IA ATIVA — ATUALIZADA 2026</div>
+      <h1>A <span class="gradient">Inteligência Artificial</span> feita para você ser <span class="gradient">aprovado</span> em concurso público</h1>
+      <p class="hero-description">Gere resumos, flashcards, simulados personalizados e planeje seus estudos com a primeira IA do Brasil desenvolvida exclusivamente para concurseiros.</p>
+      <div class="hero-actions">
+        <a href="https://pay.hub.la/YY70fYb2WcWVNJwNKXFV/?utm_source=search" class="btn-primary">Começar Agora →</a>
+        <a href="#como-funciona" class="btn-secondary">Como Funciona</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-value">5.000+</div><div class="hero-stat-label">Concurseiros ativos</div></div>
+        <div class="hero-stat"><div class="hero-stat-value">8</div><div class="hero-stat-label">Ferramentas de IA</div></div>
+        <div class="hero-stat"><div class="hero-stat-value">100%</div><div class="hero-stat-label">Bancas do Brasil</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-terminal">
+        <div class="terminal-header">
+          <div class="terminal-dot"></div>
+          <div class="terminal-dot"></div>
+          <div class="terminal-dot"></div>
+          <span class="terminal-title">concursa-ai v3.2</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line"><span class="t-prompt">→</span> <span class="t-cmd">concursa.init("Analista TRF-3")</span></div>
+          <div class="terminal-line"><span class="t-output">✓ Banca FCC identificada</span></div>
+          <div class="terminal-line"><span class="t-output">✓ 847 questões analisadas</span></div>
+          <div class="terminal-line"><span class="t-output">✓ Padrões de cobrança mapeados</span></div>
+          <div class="terminal-line"><span class="t-warn">⚡ Top 5: Dir. Constitucional, Administrativo, Português, Raciocínio Lógico, Informática</span></div>
+          <div class="terminal-line"><span class="t-prompt">→</span> <span class="t-cmd">concursa.gerar("plano-estudos")</span></div>
+          <div class="terminal-line"><span class="t-output">✓ Plano de 90 dias gerado com sucesso</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="social-proof">
+  <div class="container">
+    <div class="proof-grid">
+      <div class="proof-item"><div class="proof-icon">🧠</div><div><div class="proof-number">5.000+</div><div>Concurseiros usando IA</div></div></div>
+      <div class="proof-item"><div class="proof-icon">📊</div><div><div class="proof-number">1M+</div><div>Questões geradas</div></div></div>
+      <div class="proof-item"><div class="proof-icon">🏆</div><div><div class="proof-number">98%</div><div>Satisfação dos alunos</div></div></div>
+      <div class="proof-item"><div class="proof-icon">⚡</div><div><div class="proof-number">24/7</div><div>IA disponível sempre</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="container">
+    <div class="problem-grid">
+      <div>
+        <div class="section-label">O problema</div>
+        <h2 class="section-title">Por que a maioria dos concurseiros <span>não consegue aprovação?</span></h2>
+        <p class="section-subtitle">A maioria estuda errado: sem estratégia, sem foco no que realmente cai, e sem um planejamento que respeite sua rotina real.</p>
+      </div>
+      <ul class="pain-list">
+        <li class="pain-item"><div class="pain-icon">✕</div>Estuda horas sem saber o que realmente cai na prova</li>
+        <li class="pain-item"><div class="pain-icon">✕</div>Não consegue manter uma rotina consistente de estudos</li>
+        <li class="pain-item"><div class="pain-icon">✕</div>Fica perdido entre dezenas de materiais e apostilas</li>
+        <li class="pain-item"><div class="pain-icon">✕</div>Trabalha o dia inteiro e acha que não tem tempo</li>
+        <li class="pain-item"><div class="pain-icon">✕</div>Já tentou várias vezes e nunca foi aprovado</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution" id="como-funciona">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label" style="justify-content:center">Como funciona</div>
+      <h2 class="section-title">Três passos para a <span>sua aprovação</span></h2>
+      <p class="section-subtitle" style="margin:0 auto">Do login ao resultado: o Concursa AI faz o trabalho pesado por você.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card"><div class="step-number">Passo 01</div><div class="step-icon">🔐</div><h3 class="step-title">Faça seu login</h3><p class="step-desc">Acesse a plataforma e tenha todas as ferramentas de IA à sua disposição imediatamente.</p></div>
+      <div class="step-card"><div class="step-number">Passo 02</div><div class="step-icon">⚡</div><h3 class="step-title">Use as ferramentas</h3><p class="step-desc">Gere resumos, flashcards, simulados e questões com IA. Planeje seus estudos com base na sua rotina real.</p></div>
+      <div class="step-card"><div class="step-number">Passo 03</div><div class="step-icon">🏆</div><h3 class="step-title">Seja aprovado</h3><p class="step-desc">Siga o plano gerado pela IA e domine os conteúdos que mais caem na prova da sua banca.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="funcionalidades">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label" style="justify-content:center">Funcionalidades</div>
+      <h2 class="section-title">Tudo que você precisa em <span>uma só plataforma</span></h2>
+      <p class="section-subtitle" style="margin:0 auto">8 ferramentas de inteligência artificial pensadas exclusivamente para concurseiros.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feature-header"><div class="feature-icon">📅</div><h3 class="feature-name">Planejador de Estudos com IA</h3></div><p class="feature-desc">Cronograma 100% personalizado com base no seu tempo, metas e nível de preparação. A IA organiza tudo para você.</p><span class="feature-tag">Personalizado</span></div>
+      <div class="feature-card"><div class="feature-header"><div class="feature-icon">📝</div><h3 class="feature-name">Gerador de Resumos Completos</h3></div><p class="feature-desc">Resumos prontos e atualizados em segundos. Qualquer matéria, qualquer concurso, direto ao ponto.</p><span class="feature-tag">Instantâneo</span></div>
+      <div class="feature-card"><div class="feature-header"><div class="feature-icon">🎯</div><h3 class="feature-name">Simulados Baseados na Sua Banca</h3></div><p class="feature-desc">Simulados exclusivos no estilo exato da banca do seu concurso. A IA identifica os padrões de cobrança.</p><span class="feature-tag">Bancas reais</span></div>
+      <div class="feature-card"><div class="feature-header"><div class="feature-icon">🃏</div><h3 class="feature-name">FlashCards Inteligentes</h3></div><p class="feature-desc">Decore leis, fórmulas e detalhes difíceis com flashcards gerados de acordo com o nível que precisa dominar.</p><span class="feature-tag">Memorização</span></div>
+      <div class="feature-card"><div class="feature-header"><div class="feature-icon">📊</div><h3 class="feature-name">Gerador de Questões</h3></div><p class="feature-desc">Questões focadas no conteúdo mais cobrado. A IA detecta assuntos frequentes e gera questões na hora.</p><span class="feature-tag">Alta frequência</span></div>
+      <div class="feature-card"><div class="feature-header"><div class="feature-icon">📈</div><h3 class="feature-name">Painel de Desempenho</h3></div><p class="feature-desc">Acompanhe sua evolução, identifique pontos fracos e compare sua nota com a média dos aprovados.</p><span class="feature-tag">Analytics</span></div>
+      <div class="feature-card"><div class="feature-header"><div class="feature-icon">🤖</div><h3 class="feature-name">Tutor IA 24h</h3></div><p class="feature-desc">Tire dúvidas, peça explicações e tenha um professor particular disponível 24 horas por dia, 7 dias por semana.</p><span class="feature-tag">Sempre online</span></div>
+      <div class="feature-card"><div class="feature-header"><div class="feature-icon">📚</div><h3 class="feature-name">Conteúdo de Todas as Disciplinas</h3></div><p class="feature-desc">Domine qualquer matéria com conteúdos claros, organizados e gerados especificamente para o seu concurso.</p><span class="feature-tag">Completo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits" id="beneficios">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label" style="justify-content:center">Resultados</div>
+      <h2 class="section-title">O que você conquista com o <span>Concursa AI</span></h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card"><div class="benefit-emoji">🛡️</div><h3 class="benefit-title">Estabilidade Financeira</h3><p class="benefit-desc">Conquiste a segurança de um cargo público com salário garantido.</p></div>
+      <div class="benefit-card"><div class="benefit-emoji">⏱️</div><h3 class="benefit-title">10x Mais Rápido</h3><p class="benefit-desc">Memorize conteúdos muito mais rápido com flashcards e resumos inteligentes.</p></div>
+      <div class="benefit-card"><div class="benefit-emoji">🎯</div><h3 class="benefit-title">Estude o que Cai</h3><p class="benefit-desc">A IA identifica os assuntos mais cobrados para você focar no essencial.</p></div>
+      <div class="benefit-card"><div class="benefit-emoji">📋</div><h3 class="benefit-title">Planejamento Real</h3><p class="benefit-desc">Cronograma que respeita sua rotina de trabalho e tempo disponível.</p></div>
+      <div class="benefit-card"><div class="benefit-emoji">🚀</div><h3 class="benefit-title">Saia na Frente</h3><p class="benefit-desc">Use tecnologia que 99% dos concurseiros ainda não conhecem.</p></div>
+      <div class="benefit-card"><div class="benefit-emoji">🏠</div><h3 class="benefit-title">Realize seus Sonhos</h3><p class="benefit-desc">Casa própria, viagens, independência — tudo começa com a aprovação.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="depoimentos">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label" style="justify-content:center">Depoimentos</div>
+      <h2 class="section-title">Quem já usa, <span>recomenda</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"O planejador de estudos mudou minha vida. Eu trabalho 8h por dia e achava impossível estudar, mas a IA organizou tudo pra mim."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">MR</div><div><div class="testimonial-name">Mariana R.</div><div class="testimonial-role">Aprovada — Analista TRT</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Os simulados são idênticos ao estilo da banca CESPE. Fiquei impressionado com a precisão. Recomendo demais!"</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">LC</div><div><div class="testimonial-name">Lucas C.</div><div class="testimonial-role">Estudando para PRF</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Em 3 semanas de uso, já senti meu desempenho subir. Os flashcards são viciantes e muito eficientes."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">AS</div><div><div class="testimonial-name">Ana S.</div><div class="testimonial-role">Concurseira — Área Fiscal</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="preco">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label" style="justify-content:center">Investimento</div>
+      <h2 class="section-title">Acesse <span>todas as ferramentas</span> por um único valor</h2>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-badge">Oferta especial</div>
+      <div class="pricing-old">De R$1.302,00</div>
+      <div class="pricing-label">Por apenas 3x de</div>
+      <div class="pricing-value">R$73,51</div>
+      <div class="pricing-period">ou R$197,00 à vista</div>
+      <ul class="pricing-features">
+        <li>Planejador de Estudos com IA</li>
+        <li>Gerador de Resumos Completos</li>
+        <li>Simulados por Banca</li>
+        <li>FlashCards Inteligentes</li>
+        <li>Gerador de Questões</li>
+        <li>Painel de Desempenho</li>
+        <li>Tutor IA 24 horas</li>
+        <li>Conteúdo de Todas as Disciplinas</li>
+      </ul>
+      <a href="https://pay.hub.la/YY70fYb2WcWVNJwNKXFV/?utm_source=search" class="btn-primary pricing-cta">Quero Ser Aprovado com IA →</a>
+      <div class="pricing-guarantee">🔒 Acesso imediato após a compra</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="section-label" style="justify-content:center">Dúvidas frequentes</div>
+      <h2 class="section-title">Perguntas <span>respondidas</span></h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">O que é o Concursa AI?<span class="faq-chevron">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">O Concursa AI é a primeira inteligência artificial desenvolvida exclusivamente para concurso público. Ele gera resumos, flashcards, simulados personalizados, planeja seus estudos e identifica padrões de questões da sua banca.</div></div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Funciona para qualquer concurso?<span class="faq-chevron">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Sim. O Concursa AI identifica os padrões de qualquer banca do Brasil — CESPE, FCC, FGV, VUNESP, e todas as outras — e gera conteúdo personalizado para o concurso que você está se preparando.</div></div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Preciso ter experiência com tecnologia?<span class="faq-chevron">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Não. O Concursa AI foi pensado para ser simples e intuitivo. Basta fazer login e começar a usar as ferramentas. Não é necessário nenhum conhecimento técnico.</div></div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Quanto tempo leva para ver resultados?<span class="faq-chevron">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Desde o primeiro dia você já consegue gerar resumos, flashcards e simulados. A maioria dos usuários reporta melhora significativa na organização e desempenho em menos de 2 semanas.</div></div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Como recebo o acesso após a compra?<span class="faq-chevron">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Imediatamente após a confirmação do pagamento, você recebe o acesso no seu e-mail e já pode começar a usar todas as ferramentas do Concursa AI.</div></div></div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">O Concursa AI é melhor que o ChatGPT?<span class="faq-chevron">▼</span></button><div class="faq-answer"><div class="faq-answer-inner">Para concurso público, sim. O ChatGPT é uma IA genérica. O Concursa AI foi treinado e otimizado especificamente para concurso público brasileiro, com ferramentas dedicadas como simulados por banca, planejador de estudos e identificação de padrões de cobrança.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-glow"></div>
+  <div class="container">
+    <div class="section-label" style="justify-content:center">Comece agora</div>
+    <h2>Sua aprovação começa com <span class="gradient" style="background:linear-gradient(135deg,var(--y400),var(--c400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">inteligência artificial</span></h2>
+    <p>Pare de estudar no escuro. Deixe a IA mostrar o caminho mais rápido para o seu cargo público.</p>
+    <a href="https://pay.hub.la/YY70fYb2WcWVNJwNKXFV/?utm_source=search" class="btn-primary" style="font-size:1.08rem;padding:22px 48px;">Acessar o Concursa AI →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo"><div class="nav-logo-icon">C</div><div class="nav-logo-text">Concursa<em>AI</em></div></a>
+        <p>A primeira inteligência artificial do Brasil desenvolvida exclusivamente para concurso público.</p>
+      </div>
+      <div class="footer-links"><h4>Produto</h4><ul><li><a href="#funcionalidades">Funcionalidades</a></li><li><a href="#preco">Preço</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div class="footer-links"><h4>Legal</h4><ul><li><a href="#">Termos de Uso</a></li><li><a href="#">Política de Privacidade</a></li><li><a href="#">Contato</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">© 2026 Concursa AI — EG Educação Digital. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn){const item=btn.parentElement;const wasActive=item.classList.contains('active');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('active'));if(!wasActive)item.classList.add('active');}
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.1});
+document.querySelectorAll('.step-card,.feature-card,.benefit-card,.testimonial-card,.pain-item').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s ease,transform .6s ease';observer.observe(el);});
+</script>
+</body>
+</html>
