@@ -293,8 +293,12 @@ nav .container{display:flex;align-items:center;justify-content:space-between;}
 /* ═════ FEATURES ═════ */
 .features{background:var(--bg-dark-2);position:relative;}
 .features::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(243,230,0,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(243,230,0,.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
-.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:60px;}
-.feature-card{padding:30px 28px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all .4s;position:relative;overflow:hidden;}
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:60px;}
+.feature-card{padding:28px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all .4s;position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.feature-mockup{position:relative;margin:18px -28px -28px;padding:18px 20px 0;background:linear-gradient(180deg,transparent,rgba(243,230,0,.03) 40%,rgba(248,124,86,.04));border-top:1px solid var(--border);min-height:200px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;}
+.feature-mockup::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center bottom,rgba(243,230,0,.08),transparent 70%);pointer-events:none;}
+.feature-mockup img{max-width:100%;height:auto;display:block;filter:drop-shadow(0 12px 28px rgba(0,0,0,.5));transition:transform .5s;position:relative;z-index:1;max-height:220px;object-fit:contain;}
+.feature-card:hover .feature-mockup img{transform:translateY(-4px) scale(1.02);}
 .feature-card::before{content:attr(data-tag);position:absolute;top:14px;right:18px;font-family:var(--mono);font-size:.62rem;color:var(--text-muted);opacity:.6;letter-spacing:1px;}
 .feature-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--y400),transparent);opacity:0;transition:opacity .4s;}
 .feature-card:hover{border-color:var(--border-accent);box-shadow:var(--glow-y);transform:translateY(-2px);}
@@ -623,6 +627,7 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
         </div>
         <p class="feature-desc">Cronograma 100% personalizado com base no seu tempo, metas e nível de preparação. A IA organiza tudo automaticamente.</p>
         <span class="feature-tag">Automático</span>
+        <div class="feature-mockup"><img src="images/mockups/mockup-planejador.png" alt="Planejador de Estudos" loading="lazy"></div>
       </div>
       <div class="feature-card" data-tag="02">
         <div class="feature-header">
@@ -631,6 +636,7 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
         </div>
         <p class="feature-desc">Resumos prontos e atualizados em segundos. Qualquer matéria, qualquer concurso, direto ao ponto — sem enrolação.</p>
         <span class="feature-tag">Instantâneo</span>
+        <div class="feature-mockup"><img src="images/mockups/mockup-resumos.png" alt="Gerador de Resumos" loading="lazy"></div>
       </div>
       <div class="feature-card" data-tag="03">
         <div class="feature-header">
@@ -639,6 +645,7 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
         </div>
         <p class="feature-desc">Provas simuladas no estilo exato da banca do seu concurso. A IA identifica os padrões de cobrança históricos.</p>
         <span class="feature-tag">Padrões da Banca</span>
+        <div class="feature-mockup"><img src="images/mockups/mockup-simulados.png" alt="Simulados por Banca" loading="lazy"></div>
       </div>
       <div class="feature-card" data-tag="04">
         <div class="feature-header">
@@ -647,6 +654,7 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
         </div>
         <p class="feature-desc">Decore leis, fórmulas e detalhes difíceis com flashcards gerados automaticamente no nível ideal para você.</p>
         <span class="feature-tag">Memorização</span>
+        <div class="feature-mockup"><img src="images/mockups/mockup-flashcards.png" alt="Flashcards Inteligentes" loading="lazy"></div>
       </div>
       <div class="feature-card" data-tag="05">
         <div class="feature-header">
@@ -655,6 +663,7 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
         </div>
         <p class="feature-desc">Questões focadas no conteúdo mais cobrado. A IA detecta assuntos frequentes e gera questões na hora.</p>
         <span class="feature-tag">Alta Frequência</span>
+        <div class="feature-mockup"><img src="images/mockups/mockup-questoes.png" alt="Gerador de Questões" loading="lazy"></div>
       </div>
       <div class="feature-card" data-tag="06">
         <div class="feature-header">
@@ -663,6 +672,7 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
         </div>
         <p class="feature-desc">Acompanhe sua evolução em tempo real, identifique pontos fracos e compare sua nota com a média dos aprovados.</p>
         <span class="feature-tag">Tempo Real</span>
+        <div class="feature-mockup"><img src="images/mockups/mockup-desempenho.png" alt="Painel de Desempenho" loading="lazy"></div>
       </div>
       <div class="feature-card" data-tag="07">
         <div class="feature-header">
@@ -671,6 +681,7 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
         </div>
         <p class="feature-desc">Tire dúvidas, peça explicações e tenha um professor particular disponível 24 horas por dia, 7 dias por semana.</p>
         <span class="feature-tag">Sempre Online</span>
+        <div class="feature-mockup"><img src="images/mockups/mockup-tutor.png" alt="Tutor IA 24 horas" loading="lazy"></div>
       </div>
       <div class="feature-card" data-tag="08">
         <div class="feature-header">
@@ -679,6 +690,7 @@ footer{padding:60px 0 30px;border-top:1px solid var(--border);background:var(--b
         </div>
         <p class="feature-desc">Base completa com conteúdos claros e organizados, gerados especificamente para o seu concurso.</p>
         <span class="feature-tag">Cobertura Total</span>
+        <div class="feature-mockup"><img src="images/mockups/mockup-disciplinas.png" alt="Todas as Disciplinas" loading="lazy"></div>
       </div>
     </div>
   </div>
