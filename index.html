@@ -68,8 +68,9 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
+html,body{max-width:100vw;overflow-x:hidden;overscroll-behavior-x:none;}
 html{scroll-behavior:smooth;font-size:16px;}
-body{font-family:var(--font);background:var(--bg-dark);color:var(--text-primary);overflow-x:hidden;line-height:1.7;}
+body{font-family:var(--font);background:var(--bg-dark);color:var(--text-primary);line-height:1.7;position:relative;}
 
 /* ═════ MATRIX RAIN CANVAS (bg) ═════ */
 #matrix-canvas{position:fixed;inset:0;z-index:0;opacity:.14;pointer-events:none;}
@@ -387,7 +388,7 @@ nav .container{display:flex;align-items:center;justify-content:space-between;}
 
 @media(max-width:900px){
   .pricing-grid{grid-template-columns:1fr;max-width:560px;}
-  .pricing-card-elite{transform:none;}
+  .pricing-card-elite{transform:none;order:-1;}
 }
 .pricing-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--y400),var(--c400),var(--y400));background-size:200% auto;animation:shimmer 3s linear infinite;}
 .pricing-card::after{content:none;}
