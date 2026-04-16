@@ -12,7 +12,7 @@ const painPoints = [
 ];
 
 export function Problem() {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView<HTMLUListElement>();
 
   return (
     <section className="py-24 bg-gradient-to-b from-bg-dark to-bg-dark-2">
